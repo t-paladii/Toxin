@@ -2,13 +2,46 @@
 <html lang="en">
   <head>
     <title>Landing page</title>
+    <style>
+       head {
+  font-size: 10px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 192rem;
+  margin: 0 auto;
+}
+
+    </style>
   </head>
   <body></body>
   <header>
-    <div class="header">
-      <p>шапка
-        <h1>Pug - node template engine</h1>
-      </p>
+    <div class="header"><a href="#"> <img src="img/logo.svg" alt="TOXIN"></a>
+      <div class="header-menu"> 
+        <nav>
+          <ul class="nav"> 
+            <li class="nav-item"> <a class="nav-link nav-link-active" href="">О нас</a></li>
+            <li class="nav-item"> <a class="nav-link" href="">Услуги</a></li>
+            <li class="nav-item"> <a class="nav-link" href="">Вакансии</a></li>
+            <li class="nav-item"> <a class="nav-link" href="">Новости</a></li>
+            <li class="nav-item"> <a class="nav-link" href="">Соглашения</a></li>
+          </ul>
+        </nav>
+        <ul class="account">
+          <li class="account-item"> 
+            <button class="account-btn account-btn-enter">Войти</button>
+          </li>
+          <li class="account-item"> 
+            <button class="account-btn account-btn-registration">Зарегистрироваться</button>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <footer> 
