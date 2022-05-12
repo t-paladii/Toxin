@@ -3,8 +3,31 @@
   <head>
     <title>Landing page</title>
     <style>
-       head {
-  font-size: 10px;
+       /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+/*# sourceMappingURL=normalize.min.css.map */@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+head {
+  font-size: 14px;
+}
+
+body {
+  color: #1F2041BF;
+  font-size: 14px;
+  font-family: 'Montserrat';
 }
 
 .header {
@@ -14,8 +37,95 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 192rem;
   margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding-right: 0;
+}
+
+.nav-item {
+  margin: 0 0.9rem;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-right: 75px;
+}
+
+.account-btn {
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 8px 18px;
+  border-radius: 22px;
+  text-transform: uppercase;
+}
+
+.account-btn-enter {
+  background: #fff;
+  color: #8ba4f9;
+  position: relative;
+  background-clip: padding-box;
+  border: 2px;
+}
+
+.account-btn-enter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(to bottom, #bc9cff, #8ba4f9);
+  z-index: -1;
+  margin: -2px;
+  border-radius: 22px;
+}
+
+.account-btn-registration {
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(to bottom, #bc9cff, #8ba4f9);
+  position: relative;
+  background-clip: padding-box;
+  border: 2px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.account-btn-registration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
+  background: linear-gradient(to bottom, #bc9cff, #8ba4f9);
+  z-index: -1;
+  margin: -2px;
+  border-radius: 22px;
 }
 
     </style>
@@ -23,25 +133,23 @@
   <body></body>
   <header>
     <div class="header"><a href="#"> <img src="img/logo.svg" alt="TOXIN"></a>
-      <div class="header-menu"> 
-        <nav>
-          <ul class="nav"> 
-            <li class="nav-item"> <a class="nav-link nav-link-active" href="">О нас</a></li>
-            <li class="nav-item"> <a class="nav-link" href="">Услуги</a></li>
-            <li class="nav-item"> <a class="nav-link" href="">Вакансии</a></li>
-            <li class="nav-item"> <a class="nav-link" href="">Новости</a></li>
-            <li class="nav-item"> <a class="nav-link" href="">Соглашения</a></li>
-          </ul>
-        </nav>
-        <ul class="account">
-          <li class="account-item"> 
-            <button class="account-btn account-btn-enter">Войти</button>
-          </li>
-          <li class="account-item"> 
-            <button class="account-btn account-btn-registration">Зарегистрироваться</button>
-          </li>
+      <nav>
+        <ul class="nav"> 
+          <li class="nav-item"> <a class="nav-link nav-link-active" href="">О нас</a></li>
+          <li class="nav-item"> <a class="nav-link" href="">Услуги</a></li>
+          <li class="nav-item"> <a class="nav-link" href="">Вакансии</a></li>
+          <li class="nav-item"> <a class="nav-link" href="">Новости</a></li>
+          <li class="nav-item"> <a class="nav-link" href="">Соглашения</a></li>
         </ul>
-      </div>
+      </nav>
+      <ul class="account">
+        <li class="account-item"> 
+          <button class="account-btn account-btn-enter">Войти</button>
+        </li>
+        <li class="account-item"> 
+          <button class="account-btn account-btn-registration">Зарегистироваться</button>
+        </li>
+      </ul>
     </div>
   </header>
   <footer> 
